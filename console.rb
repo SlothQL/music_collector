@@ -11,6 +11,12 @@ artist1 = Artist.new( {
 })
 artist1.save()
 
+artist2 = Artist.new( {
+    'first_name' => 'Brandon',
+    'last_name' => 'Boyd'
+})
+artist2.save()
+
 album1 = Album.new( {
     'title' => 'One by One',
     'genre' => 'Alternative rock',
