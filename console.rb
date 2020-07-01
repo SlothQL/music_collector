@@ -20,6 +20,12 @@ artist2.save()
 artist2.first_name = 'Brandon Charles'
 artist2.update()
 
+artist3 = Artist.new( {
+    'first_name' => 'Brody',
+    'last_name' => 'Dalle'
+})
+artist3.save()
+
 album1 = Album.new( {
     'title' => 'One by One',
     'genre' => 'Alternative rock',
@@ -36,6 +42,16 @@ album2 = Album.new( {
     'artist_id' => artist2.id
 })
 album2.save()
+
+album3 = Album.new( {
+    'title' => 'Wasting Light',
+    'genre' => 'Alternative rock',
+    'artist_id' => artist1.id
+})
+album3.save()
+
+artist3.delete()
+album3.delete()
 
 binding.pry
 nil
