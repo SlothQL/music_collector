@@ -17,12 +17,18 @@ artist2 = Artist.new( {
 })
 artist2.save()
 
+artist2.first_name = 'Brandon Charles'
+artist2.update()
+
 album1 = Album.new( {
     'title' => 'One by One',
     'genre' => 'Alternative rock',
     'artist_id' => artist1.id
 })
 album1.save()
+
+album1.title = 'The Colour and the Shape'
+album1.update()
 
 album2 = Album.new( {
     'title' => 'Make yourself',
