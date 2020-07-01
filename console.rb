@@ -58,5 +58,7 @@ search_for_album = Album.find_by_id(album2.id)
 
 no_such_artist = Artist.find_by_id(5)
 
+album_by_title = Album.find_by_title('Make yourself')
+
 binding.pry
 nil

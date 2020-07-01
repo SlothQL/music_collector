@@ -65,4 +65,14 @@ class Album
         return found_album
     end
 
+    def self.find_by_title(title)
+        sql = "SELECT * FROM albums WHERE title = $1"
+        values = [title]
+        result = SqlRunner.run(sql, values)
+        return nil if result.first() == nil
+        result_hash = result[0]
+        found_album = Album.new(result_hash)
+        return found_album
+    end
+
 end
