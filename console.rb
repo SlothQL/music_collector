@@ -53,5 +53,10 @@ album3.save()
 artist3.delete()
 album3.delete()
 
+search_for_artist = Artist.find_by_id(artist1.id)
+search_for_album = Album.find_by_id(album2.id)
+
+no_such_artist = Artist.find_by_id(5)
+
 binding.pry
 nil
